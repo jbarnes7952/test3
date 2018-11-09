@@ -8,7 +8,8 @@ terraform {
 }
 
 resource "tls_private_key" "private_key" {
-  algorithm = "RSA"
+  count = 0
+	algorithm = "RSA"
 }
 
 output "tls_private_key_pem" {
